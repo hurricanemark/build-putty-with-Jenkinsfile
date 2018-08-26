@@ -17,16 +17,18 @@ pipeline {
                 sh 'cd unix; make' 
             }
         }
-#        stage ('Test') { 
-#            steps {
-#                sh 'make test' 
-#            }
-#        }
-#        stage ('Install') {
-#            steps {
-#                sh 'make install' 
-#            }
-#        }
+/*
+        stage ('Test') { 
+            steps {
+                sh 'make test' 
+            }
+        }
+        stage ('Install') {
+            steps {
+                sh 'make install' 
+            }
+        }
+*/
         stage ('Clean') {
             steps {
                 sh 'make clean' 
