@@ -22,11 +22,11 @@ pipeline {
 #                sh 'make test' 
 #            }
 #        }
-        stage ('Install') {
-            steps {
-                sh 'make install' 
-            }
-        }
+#        stage ('Install') {
+#            steps {
+#                sh 'make install' 
+#            }
+#        }
         stage ('Clean') {
             steps {
                 sh 'make clean' 
