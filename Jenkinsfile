@@ -13,7 +13,7 @@ pipeline {
         }
         stage ('Build') {
             steps {
-                sh 'cd putty-0.67; ./configure' 
+                sh 'unix/configure' 
                 sh 'cd unix; make' 
             }
         }
