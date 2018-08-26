@@ -6,6 +6,11 @@ pipeline {
     } 
 
     stages {
+        stage ('Clone') {
+            steps {
+                git url: 'https://github.com/hurricanemark/putty-0.67.git' 
+            }
+        }
         stage ('Build') {
             steps {
                 sh 'cd putty-0.67/unix; ./configure' 
