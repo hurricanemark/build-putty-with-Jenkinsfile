@@ -15,13 +15,8 @@ pipeline {
             steps {
                 sh 'tar -zxvf putty-0.67-modified.tar.gz' 
                 sh 'cd putty-0.67/unix' 
-                try {
-                    sh './configure' 
-                } catch {
-                    currentBuild.result = "SUCCESS"  /* strong arm this error */
-                    /* we only need to build the command lines here, so continue */
-                    sh 'make' 
-                } 
+                sh './configure' 
+                sh 'make all' 
             }
         }
 /*
