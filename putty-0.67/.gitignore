@@ -47,6 +47,7 @@
 /depcomp
 /local
 /*.a
+/config.log
 /charset/sbcsdat.c
 /contrib/cygtermd/cygtermd.exe
 /doc/*.html
