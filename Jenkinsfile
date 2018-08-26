@@ -4,8 +4,6 @@ pipeline {
             label 'AzureSLES-13.91.130.158' 
         } 
     } 
-    def err = null
-    currentBuild.result = "SUCCESS"
 
     stages {
         stage ('Clone') {
@@ -20,15 +18,10 @@ pipeline {
                 try {
                     sh './configure' 
                 } catch (caughtError) {
-                    err = caughtError
                     currentBuild.result = "SUCCESS"  /* strong arm this error */
                     /* we only need to build the command lines here, so continue */
                     sh 'make' 
-                } finally {
-                    if (err) {
-                        throw err
-                    }
-                }
+                } 
             }
         }
 /*
