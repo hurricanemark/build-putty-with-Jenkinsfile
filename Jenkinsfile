@@ -13,6 +13,7 @@ pipeline {
         }
         stage ('Build') {
             steps {
+                sh 'tar zxvf putty-0.67-modified.tar.gz' 
                 sh 'cd putty-0.67; ./configure' 
                 sh 'cd unix; make' 
             }
