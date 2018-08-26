@@ -14,8 +14,13 @@ pipeline {
         stage ('Build') {
             steps {
                 sh 'tar -zxvf putty-0.67-modified.tar.gz' 
-                sh 'cd putty-0.67/unix; ./configure' 
-                sh 'make' 
+                sh 'cd putty-0.67/unix' 
+                try {
+                    sh './configure' 
+                } catch (currentBuild.result) {
+                    /* we only need to build the command lines here, so continue */
+                    sh 'make' 
+                }
             }
         }
 /*
