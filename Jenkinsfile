@@ -22,6 +22,11 @@ pipeline {
                 sh 'make install' 
             }
         }
+        stage ('Clean') {
+            steps {
+                sh 'make clean' 
+            }
+        }
     }
     post {
         always {
