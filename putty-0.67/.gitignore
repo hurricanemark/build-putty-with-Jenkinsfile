@@ -47,10 +47,8 @@
 /config.status
 /Makefile.am
 /Makefile.in
-/Makefile
 /compile
 /config.status
-/configure
 /stamp-h1
 /aclocal.m4
 /ar-lib
@@ -93,8 +91,6 @@
 /macosx/pscp
 /testdata/bignum.txt
 /unix/Makefile.gtk
-/unix/Makefile.ux
-/unix/Makefile.local
 /unix/empty.h
 /unix/plink
 /unix/pterm
