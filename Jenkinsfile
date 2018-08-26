@@ -17,7 +17,7 @@ pipeline {
                 sh 'cd putty-0.67/unix' 
                 try {
                     sh './configure' 
-                } catch (currentBuild.result) {
+                } catch (err) {
                     /* we only need to build the command lines here, so continue */
                     sh 'make' 
                 }
